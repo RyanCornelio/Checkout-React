@@ -6,24 +6,18 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import About from './pages/About'
+import Cart from './pages/Cart'
+import Contact from './pages/Contact'
+import Home from './pages/Home'
+import Store from './pages/Store'
+import { Switch } from '@mui/material'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   
   <React.StrictMode>
-   <BrowserRouter>
-    <Routes>
-      {/* <Route path="/" element={<App/>}>
-        <Route path="About" element={<About />} />
-        <Route path="Cart" element={<Cart />} />
-        <Route path="Contact" element={<Contact />} />
-        <Route path="Home" element={<Home />} />
-        <Route path="Store" element={<Store />} />
-      </Route> */}
-    </Routes>
-  </BrowserRouter>,
     <App />
-    <Navbar/>
-    <Footer />
+    
   </React.StrictMode>
   
 )
