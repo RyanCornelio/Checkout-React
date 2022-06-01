@@ -1,3 +1,4 @@
+import { CSSProperties, FC } from 'react';
 import React from 'react'
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -6,11 +7,29 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
+interface Props {}
 
+const headerDiv: CSSProperties = {
+    display: "inline-flex",
+    alignItems: "flex-end"
+}
 
-const Navbar = () => {
+const headerItem: CSSProperties = {
+    fontSize: '1.7em',
+    margin: 0,
+    padding: 0,
+    alignItems: 'center',
+    cursor: 'pointer',
+    textDecoration: "none",
+    color: "#ffffff",
+    alignContent: "center",
+    display: "inline-flex",
+    flexDirection: "row",
+};
+
+const Navbar: FC<Props> = (props) => {
   return (
     <Box sx={{ flexGrow: 1 }}>
     <AppBar position="static">
@@ -22,24 +41,28 @@ const Navbar = () => {
           aria-label="menu"
           sx={{ mr: 2 }}
         >
-          <MenuIcon />
-        </IconButton>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          News
-        </Typography>
-        <div className="links">
+
+<div className="links">
+            {/* Header */}
+            <div className="header">
             <h1>Checkout react</h1>
-        <Link to="/"><Button color="inherit">Home</Button></Link>
-        <Link to="/About"><Button color="inherit">About</Button></Link>
-        <Link to="/Store"><Button color="inherit">Store</Button></Link>
-        <Link to="/Cart"><Button color="inherit">Cart</Button></Link>
-        <Link to="/Contact"><Button color="inherit"><Button color="inherit">Contact</Button></Button></Link>
-        
-        
-        
-        
+            </div>
+           {/*  Meny  */}
+            <div className="links-style" style={headerDiv}>
+        <Link to="/" style={headerItem}><Button color="inherit">Home</Button></Link>
+        <Link to="/About" style={headerItem}><Button color="inherit">About</Button></Link>
+        <Link to="/Store" style={headerItem}><Button color="inherit">Store</Button></Link>
+        <Link to="/Cart" style={headerItem}><Button color="inherit">Cart</Button></Link>
+        <Link to="/Contact" style={headerItem}><Button color="inherit">Contact</Button></Link>
+            </div>
         
         </div>
+         {/*  <MenuIcon /> */}
+        </IconButton>
+        {/* <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          News
+        </Typography> */}
+        
       </Toolbar>
     </AppBar>
   </Box>
