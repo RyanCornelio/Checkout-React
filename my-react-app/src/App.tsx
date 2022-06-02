@@ -8,6 +8,9 @@ import Contact from './pages/Contact'
 import Home from './pages/Home'
 import Store from './pages/Store'
 import Footer from './components/Footer'
+import Toolbar from '@mui/material/Toolbar';
+
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -22,10 +25,12 @@ function App() {
         <Route path="Contact" element={<Contact />} />
         <Route path="Store" element={<Store />} />
       </Routes>
-      <div className="App">
+      {/* <div className="App">
         Hello World
-      </div>
+      </div> */}
+      <Toolbar style={{ backgroundColor: "grey", justifyContent: "Center", position: "static", height: "50px", color: "white"}}>
       <Footer />
+      </Toolbar>
     </Router>
 
 

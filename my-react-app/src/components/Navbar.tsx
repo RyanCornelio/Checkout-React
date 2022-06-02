@@ -31,7 +31,7 @@ const headerItem: CSSProperties = {
 
 const Navbar: FC<Props> = (props) => {
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1}}>
     <AppBar position="static">
       <Toolbar>
         <IconButton
@@ -45,7 +45,9 @@ const Navbar: FC<Props> = (props) => {
 <div className="links">
             {/* Header */}
             <div className="header">
-            <h1>Checkout react</h1>
+            <Link to="/" style={headerItem}>
+            <h1>The Flower Store</h1>
+            </Link>
             </div>
            {/*  Meny  */}
             <div className="links-style" style={headerDiv}>
