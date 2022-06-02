@@ -4,7 +4,7 @@ import { CSSProperties } from '@material-ui/core/styles/withStyles'
 
 /* for eller map för listan */
 
-console.log(Products);
+/* console.log(Products); */
 
 const Store = () => {
   return (
@@ -12,7 +12,7 @@ const Store = () => {
 
     <div style={boxStyle}><h3>Store page</h3></div>
     <div style={boxStyle}>
-    <p>See our products here.</p>
+    <p>View products.</p>
 
     </div>
     </>

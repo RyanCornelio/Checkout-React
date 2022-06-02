@@ -5,9 +5,9 @@ const Cart = () => {
   return (
     <>
 
-    <div style={boxStyle}><h3>Home page</h3></div>
+    <div style={boxStyle}><h3>Cart page</h3></div>
     <div style={boxStyle}>
-    <p>Hi! Welcome to our flower shop.</p>
+    <p>Hi! Ready to checkout?</p>
 
     </div>
     </>
