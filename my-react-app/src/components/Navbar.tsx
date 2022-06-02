@@ -13,7 +13,8 @@ interface Props {}
 
 const headerDiv: CSSProperties = {
     display: "inline-flex",
-    alignItems: "flex-end"
+    alignItems: "flex-end",
+    flexWrap: "wrap"
 }
 
 const headerItem: CSSProperties = {
@@ -46,7 +47,7 @@ const Navbar: FC<Props> = (props) => {
             {/* Header */}
             <div className="header">
             <Link to="/" style={headerItem}>
-            <h1>The Flower Store</h1>
+            <h3>The Flower Store</h3>
             </Link>
             </div>
            {/*  Meny  */}

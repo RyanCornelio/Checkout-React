@@ -1,26 +1,27 @@
 import React from 'react'
-import ImageList from '@mui/material/ImageList';
-import ImageListItem from '@mui/material/ImageListItem';
 import { Products } from '../components/productList';
-
-export default function StandardImageList() {
-  
-}
+import { CSSProperties } from '@material-ui/core/styles/withStyles'
 
 /* for eller map för listan */
 
 console.log(Products);
 
-
-
-
-const About = () => {
+const Store = () => {
   return (
     <>
-    <div>Store page, Here you can see our products.</div>
-    <Products />
+
+    <div style={boxStyle}><h3>Store page</h3></div>
+    <div style={boxStyle}>
+    <p>See our products here.</p>
+
+    </div>
     </>
   )
 }
 
-/* export default About */
+const boxStyle: CSSProperties = {
+  display: "flex",
+  justifyContent: "center",
+}
+
+export default Store
